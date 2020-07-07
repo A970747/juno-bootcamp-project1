@@ -1,3 +1,5 @@
+/* snippets */
+
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:0em 0}figcaption,figure,main{display:block}figure{margin:0em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
@@ -8,6 +10,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* general CSS + typography */
+
 :root {
     --primary-white: #FFFFFF;
     --primary-accent: #E75605;
@@ -17,7 +21,6 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 html {
     font-size: 62.5%;
     font-family: 'Montserrat', arial, sans-serif;
-    /* font-family: 'Catamaran', sans-serif; */
 }
 
 a,
@@ -26,54 +29,410 @@ a:visited {
     text-decoration: none;
 }
 
-h1 {
-    color: var(--primary-accent);
-    font-size: 14.6em;
-}
-
-nav {
-    color: var(--secondary-accent);
-    font-size: 2em;
-}
-
 ul {
-    text-align: center;
+    margin: 0;
     padding: 0;
-    margin-bottom: 0;
-
+    list-style: none;
 }
 
-ul li {
-    display: inline;
-}
-
-ul li:first-child {
+h1,
+h2 {
     color: var(--primary-accent);
 }
 
-.hero {
+
+h1 {
+    font-size: 14.64rem;
+    /* font-size: calc( 5em + 5vw); */
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 4.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--primary-white);
+    margin: 0;
+}
+
+p,
+.navigation {
+    color: var(--secondary-accent);
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2rem;
+}
+
+.navigation {
+    font-family: 'Montserrat', arial, sans-serif;
+}
+
+section {
     width: 100%;
 }
 
-.hero img {
-    display: inline-block;
-    /* float: left; */
-    max-width: 40%;
-    background: red;
-    vertical-align: middle;
+.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
 }
 
-.hero h1 {
+.fl {
+    float:left;
+}
+
+.fr {
+    float: right;
+}
+
+.disp-table {
+    display: table;
+}
+
+.read-more {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem;
+    border: solid var(--primary-accent) 5px;
+}
+
+/* section specific CSS */
+
+/* header */
+
+nav {
+    margin-top: 2rem;
     text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    padding: 1rem 1rem;
+}
+
+nav ul li:first-child {
+    color: var(--primary-accent);
+}
+
+.hero img {
+    vertical-align: middle;
+    max-width: 50%;
+}
+
+.hero-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 49%;
+}
+
+.hero-inner ul {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: inline-block;
+    color: var(--primary-accent);
+    font-size: 3rem;
+}
+
+/* 2nd section, float left and right images */
+
+.art-img {
+    width: 100%;
+    max-width: 80rem;
+    clear: both;
+}
+
+.art-50 {
     display: table-cell;
     vertical-align: middle;
+    width: 50%;
+    padding: 0 5%
 }
 
-.text {
-    display: inline-block;
-    height: 100%;
-    max-width: 60%;
-    line-height: 100%;
+/* desserts section */
+
+.padded-article {
+    background-color: #F8F8F8;
+    width: 100%;
+    padding: 5%;
+}
+
+.padded-article > article {
+    display: table-cell;
     vertical-align: middle;
+    padding: 0 5%;
 }
 
+/* icon section */
+
+.icon-section {
+    background-color: var(--primary-accent);
+    color: var(--primary-white);
+    height: 47.5rem;
+}
+
+.icon-section div {
+    position: relative;
+    float: left;
+    top: 18rem;
+    left: 25%;
+    width: 15%;
+    margin: 0 1%;
+    text-align: center;
+}
+
+.icon-section i {
+    font-size: 8rem;
+    padding-bottom: .2em;
+    width: 80%;
+}
+
+/* final triple image section */
+
+.the-gram {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.the-gram h2 {
+    text-align: center;
+    margin: 8rem 0;
+}
+
+.the-gram div {
+    position: relative;
+    left: 10%;
+}
+
+.the-gram img {
+    width: 25%;
+    margin: 0 1%;
+}
+
+/* footer section */
+
+footer {
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+footer nav {
+    padding-top: 3rem;
+}
+
+.footer-div div {
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    width: 45%;
+}
+
+
+#email {
+    color: var(--secondary-accent);
+    background-color: var(--primary-white);
+    height: 4.5rem;
+    padding-left: 10rem;
+}
+
+input[type=submit] {
+    color: var(--secondary-accent);
+    background-color: var(--primary-white);
+    border: 3px solid var(--primary-accent);
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: .85rem;
+}
+
+@media only screen and (max-width: 375px) {
+
+    html {
+    height: 100%;
+    margin-bottom: 1px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+    .wrapper {
+        max-width: 360px;
+    }
+
+    h1 {
+        font-size: 5rem;
+        /* font-size: calc( 5em + 5vw); */
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    p,
+    .navigation,
+    .read-more  {
+        font-size: .8rem;
+    }
+
+    .read-more {
+        padding: 5px;
+        border: 1px solid var(--primary-accent);
+    }
+
+    .hero,
+    .hero img,
+    .hero-inner {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-inner h1 {
+        margin-top: 5rem;
+        margin-right: 3rem;
+        max-width: 100%;
+        text-align: right;
+    }
+
+    nav,
+    .hero-inner ul {
+        display: none;
+    }
+
+    /* div switching idea from Ed Fryed via Stack Overflow */
+    
+    .switch-container {
+        display: table;
+    }
+
+    .switch-1 {
+        display:table-footer-group;
+        width: 100%;
+    }
+
+    .switch-2 {
+        display:table-header-group;
+        width: 100%;
+    }
+
+    .art-img {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    .art-50 {
+        text-align: center;
+    }
+
+    .art-50 h2 {
+        margin-top: 2rem;
+    }
+
+
+    .padded-article img,
+    .padded-article article {
+        display: block;
+        text-align: center;
+    }
+
+    .padded-article img {
+        margin-bottom: 20px;
+    }
+
+    .the-gram div {
+        left: 0;
+        text-align: center;
+    }
+    
+    .the-gram h2 {
+        margin: 5rem;
+    }
+
+    .footer-div div {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    #email {
+        display: inline;
+    }
+
+    #submit {
+        display: block;
+    }
+
+    .icon-section {
+        background-color: var(--primary-accent);
+        color: var(--primary-white);
+        height: 40rem;
+
+    }
+    
+    .icon-section div {
+        display: block; !important
+        position: initial;
+        float: none;
+        top: 10rem;
+        left: 40%;
+        width: 20%;
+        margin: 0 0;
+    }
+    
+    .icon-section i {
+        font-size: 5rem;
+        padding-bottom: .1em;
+        width: 50%;
+    }
+
+    .icon-section h3 {
+        padding-bottom: 25px;
+    }
+}
+
+@media only screen and (min-width:376px) and (max-width: 1599px) {
+    h1 {
+        font-size: calc( 2em + 7vw);
+    }
+
+    h2 {
+        font-size: calc( 1em + 2vw);
+    }
+    
+    h3 {
+        font-size: calc( .5em + 1.5vw);
+    }
+    
+    p,
+    .navigation {
+        font-size: calc( .5em + 1vw);
+    }
+
+    .read-more {
+        font-size: calc( .5em + 1vw);
+    }
+
+    .icon-section i {
+        font-size: calc( 1em + 7vw);
+    }
+
+    .icon-section h3 {
+        font-size: calc( .5em + 1vw);
+    }
+
+    .hero-inner ul {
+        font-size: calc( .5em + 1vw);
+    }
+}

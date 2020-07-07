@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Montserrat&display=swap" rel="stylesheet"> 
     <link type="image/png" href="images/favicon.png" rel="icon">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
     <title>Hangry Tummy</title>
 </head>
 <body>
-    <header class="wrapper-90">
+    <header class="wrapper">
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="">home</a></li>
                 <li><a href="">about</a></li>
                 <li><a href="">blog</a></li>
@@ -20,14 +20,104 @@
             </ul>
         </nav>
 
-        <div class="hero clearfix">
-                <img class="clearfix" src="images/header-burger.png" alt="A delicious burger.">
-                <div class="test clearfix">
-                <h1>Hangry Tummy</h1>
+        <div class="hero switch-container">
+                <img class="switch-1" src="images/header-burger.png" alt="A delicious burger.">
+                <div class="hero-inner switch-2">
+                    <h1>hangry tummy</h1>
+                    <ul>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-snapchat-ghost"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    </ul>
                 </div>
         </div>
     </header>
 
+    <section class="wrapper">
+        <div class="disp-table clearfix switch-container">
+            <article class="art-50 switch-1">
+                <h2>new to our menu</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi alias laudantium voluptate. Voluptatum, aliquid rerum ipsa magni ab libero possimus soluta in unde rem aut!</p>
+                <p class="read-more"><a href="">read more</a></p>
+            </article>
+            <img class="fr art-img  switch-2" src="images/right-photo.jpg" alt="An egg-topped burger with a side of fries.">
+        </div>
+        <div class="disp-table clearfix switch-container">
+            <img class="fl art-img switch-2" src="images/left-photo.jpg" alt="A picture of several menu items.">
+            <article  class="art-50 switch-1">
+                <h2>full experience</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, voluptates mollitia quis soluta labore quae necessitatibus expedita, officia cum sint est magnam sunt neque aut!</p>
+                <p class="read-more"><a href="">read more</a></p>
+            </article>
+        </div>
+    </section>
 
+    <section class="wrapper">
+        <div class="disp-table padded-article clearfix">
+            <img class="fl" src="images/square-imege.jpg" alt="An assortment of delicious desserts.">
+            <article>
+                <h2>desserts</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsum exercitationem natus officiis, vero consequuntur.</p>
+                <p class="read-more"><a href="">read more</a></p>
+            </article>
+        </div>
+    </section>
+
+    <section class="icon-section wrapper">
+        <div><a href="">
+            <i class="fas fa-location-arrow"></i>
+            <h3>locations</h3>
+        </a></div>
+        <div><a href="">
+            <i class="fas fa-utensils"></i>
+            <h3>menu</h3>
+        </a></div>
+        <div><a href="">
+            <i class="fas fa-phone"></i>
+            <h3>reach out</h3>
+        </a></div>
+    </section>
+
+    <section class="the-gram wrapper">
+        <h2>the gram</h2>
+        <div>
+            <img class="gram-img-1" src="images/gallery-photo-1.jpg" alt="Cooked chicken legs.">
+            <img class="gram-img-2" src="images/gallery-photo-2.jpg" alt="A house salad with an assortment of vegetables.">
+            <img class="gram-img-3" src="images/gallery-photo-3.jpg" alt="A row of cooked chicken wings with dressing on the side.">
+        </div>
+    </section>
+
+    <footer class="wrapper">
+        <nav>
+            <ul class="navigation">
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-div switch-container">
+            <div class="switch-2">
+                <h2>contact</h2>
+                <p>info@email.com | 123 -456 -7890</p>
+                <p>123 some road, Toronto, ON</p>
+                <p>A5A 5A5, Canada</p>
+            </div>
+            <div class="switch-1">
+                <h2>stay updated</h2>
+                <p>Subscribe to our newsletter to stay updated.</p>
+                <form action="">
+                    <label for="email" class="sr-only">input e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="email address">
+                    <label for="submit" class="sr-only">submit button</label>
+                    <input type="submit" name="submit" value="subscribe">
+                </form>
+            </div>
+        </div>
+    </footer>
+
+<!--name your repository matt-jackson-project1 -->
 </body>
 </html>
